@@ -6,8 +6,10 @@ import androidx.compose.Composable
 import androidx.ui.core.setContent
 import androidx.ui.foundation.Text
 import androidx.ui.tooling.preview.Preview
+import dagger.hilt.android.AndroidEntryPoint
 import dev.trcz.exchangeratesnotifier.ui.ExchangeRatesNotifierTheme
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

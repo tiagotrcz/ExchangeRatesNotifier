@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 apply from: '../dependencies.gradle'
 
@@ -45,11 +47,18 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
     implementation "androidx.core:core-ktx:$versions.androidx_core"
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
+
     implementation "com.google.android.material:material:$versions.material"
+
     implementation "androidx.ui:ui-layout:$versions.compose"
     implementation "androidx.ui:ui-material:$versions.compose"
     implementation "androidx.ui:ui-tooling:$versions.compose"
+
+    implementation "com.google.dagger:hilt-android:$versions.hilt"
+    kapt "com.google.dagger:hilt-android-compiler:$versions.hilt"
+
     testImplementation "junit:junit:$versions.junit"
+
     androidTestImplementation "androidx.test.ext:junit:$versions.junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso_core"
 }
